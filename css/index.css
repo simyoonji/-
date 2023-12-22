@@ -3,34 +3,40 @@
     --color-dark: var(--color-black);
     --color-text: var(--color-blue);
     --color-light: var(--color-white);
+    --color-blueGray: var(--color-gray);
 
     --color-indigo : #00256c;
     --color-black : #000;
     --color-blue : #0064de;
     --color-white : #fff;
+    --color-gray : #65728a;
 }
 
+/* container area */
 #container {
     width:100%;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
 }
+
+/* banner area */
 #banner {
     width: 100%;
     min-height: 50rem;
     background: url('../images/main/main-img.jpg')center top no-repeat;
     background-size: cover;
 }
-.air__reservation {
+
+/* information area */
+.air__information {
     max-width: 128rem;
     min-height: 50rem;
     margin: 0 auto;
     padding: 8rem 0;
     box-sizing: border-box;
-    border: 1px solid red;
 }
-.air__reservation > div:first-of-type {
+.air__information > div:first-of-type {
     width: 100%;
     padding: 1.3rem 0;
     box-sizing: border-box;
@@ -38,7 +44,7 @@
     border-radius: 1rem;
     background-color: var(--color-light);
 }
-.air__reservation > div:first-of-type > span {
+.air__information > div:first-of-type > span {
     position: relative;
     padding-left: 3.3rem;
     box-sizing: border-box;
@@ -46,10 +52,10 @@
     color: #de001b;
     cursor: pointer;
 } 
-.air__reservation > div:first-of-type > span:hover {
+.air__information > div:first-of-type > span:hover {
     text-decoration: underline;
 }
-.air__reservation > div:first-of-type > span::before {
+.air__information > div:first-of-type > span::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -63,36 +69,68 @@
     background-size: cover;
 }
 
-/*  */
+/* banner tab area */
 .air__reservation_content {
     width: 100%;
 }
 .tab__content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     white-space: nowrap;
     width: 100%;
 }
-.tab__content input[type="radio"] {
+.tab__content > input[type="radio"] {
     display: none;
 }
-.tab__content input[type="radio"] + label {
+
+.tab__content > input[type="radio"] + label {
     display: inline-block;
-    min-width: 24.79%;
-    background-color: #ccc;
-    color: #999;
-    font-size: 1.4rem;
+    width: 25%;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: var(--color-blueGray);
+    color: var(--color-light);
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    font-size: 1.6rem;
+    font-weight:700;
     cursor: pointer;
 }
-.tab__content input[type="radio"]:checked + label {
-    background-color: pink;
-    color: #00256c;
+.tab__content > input[type="radio"] + label::after {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    bottom: -2rem;
+    height: 3rem;
+    width: 100%;
+    background-color: var(--color-light);
+    z-index: 2;
+}
+.tab__content > input[type="radio"] + label:hover {
+    text-decoration: underline;
+}
+.tab__content > input[type="radio"]:checked + label {
+    background-color: var(--color-light);
+    color: var(--color-black);
+    text-decoration: underline;
 }
 .conbox {
-    width: 100%;
-    height: 600px;
-    background-color: var(--color-light);
     display: none;
-    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 5.5rem;
+    width: 100%;
+    min-height: 23rem;
+    padding: 3rem 4rem 1rem;
+    box-sizing: border-box;
+    background-color: var(--color-light);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
 }
+
+/* conbox area */
 input[id="tab01"]:checked ~ .con1 {
     display: block;
 }
@@ -104,4 +142,11 @@ input[id="tab03"]:checked ~ .con3 {
 }
 input[id="tab04"]:checked ~ .con4 {
     display: block;
+}
+
+.con1__inner {
+    border: 1px solid red;
+}
+.con1__inner > ul {
+    display: flex;
 }

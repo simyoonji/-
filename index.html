@@ -365,28 +365,65 @@
       <!-- main Area -->
       <main id="main">
         <section id="banner">
-          <div class="air__reservation">
+          <div class="air__information">
             <div>
               <span>기상 악화 영향 항공편 운영 안내 (제주)</span>
             </div>
             <!-- tab menu -->
-            <div class="air__reservation_content">
+            <div class="air__information_content">
               <div class="tab__content">
                 <input type="radio" name="tabmenu" id="tab01" checked/>
-                <label for="tab01">버튼1</label>  
+                <label for="tab01" tabindex="0">항공권 예매</label>  
 
                 <input type="radio" name="tabmenu" id="tab02" />
-                <label for="tab02">버튼2</label>
+                <label for="tab02" tabindex="0">예약 조회</label>
 
                 <input type="radio" name="tabmenu" id="tab03" />
-                <label for="tab03">버튼3</label>
+                <label for="tab03" tabindex="0">체크인</label>
 
                 <input type="radio" name="tabmenu" id="tab04" />
-                <label for="tab04">버튼4</label>
+                <label for="tab04" tabindex="0">항공편 현황</label>
 
                 <!-- content 내용 -->
 
-                <div class="conbox con1">컨텐츠탭 내용1</div>
+                <div class="conbox con1">
+                  <div class="con1__inner">
+                    <ul>
+                      <li><a href="#none">예매</a></li>
+                      <li><a href="#none">마일리지 예매</a></li>
+                    </ul>
+
+                    <div class="air__way">
+                      <div class="air__way_radio">
+                        <input type="radio" name="ticket" id="way01">
+                        <label for="way01" tabindex="0">왕복</label>
+
+                        <input type="radio" name="ticket" id="way02">
+                        <label for="way02" tabindex="0">편도</label>
+                      </div>
+                      <div>
+                        <a href="#none">다구간</a>
+                      </div>
+                    </div>
+
+                    <div class="air__way_reserve">
+                      <div>
+                        <ul>
+                          <li>
+                            <span>From</span>
+                            <span>출발지</span>
+                          </li>
+                          <li>
+                            <span>To</span>
+                            <span>도착지</span>
+                          </li>
+                        </ul>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
                 <div class="conbox con2">컨텐츠탭 내용2</div>
                 <div class="conbox con3">컨텐츠탭 내용3</div>
                 <div class="conbox con4">컨텐츠탭 내용4</div>
