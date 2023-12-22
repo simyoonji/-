@@ -1,0 +1,107 @@
+:root {
+    --color-main: var(--color-indigo);
+    --color-dark: var(--color-black);
+    --color-text: var(--color-blue);
+    --color-light: var(--color-white);
+
+    --color-indigo : #00256c;
+    --color-black : #000;
+    --color-blue : #0064de;
+    --color-white : #fff;
+}
+
+#container {
+    width:100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#banner {
+    width: 100%;
+    min-height: 50rem;
+    background: url('../images/main/main-img.jpg')center top no-repeat;
+    background-size: cover;
+}
+.air__reservation {
+    max-width: 128rem;
+    min-height: 50rem;
+    margin: 0 auto;
+    padding: 8rem 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+.air__reservation > div:first-of-type {
+    width: 100%;
+    padding: 1.3rem 0;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    background-color: var(--color-light);
+}
+.air__reservation > div:first-of-type > span {
+    position: relative;
+    padding-left: 3.3rem;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    color: #de001b;
+    cursor: pointer;
+} 
+.air__reservation > div:first-of-type > span:hover {
+    text-decoration: underline;
+}
+.air__reservation > div:first-of-type > span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    bottom: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateY(-50%);
+    background: url("../images/icon/main_alert.svg")center center no-repeat;
+    background-size: cover;
+}
+
+/*  */
+.air__reservation_content {
+    width: 100%;
+}
+.tab__content {
+    white-space: nowrap;
+    width: 100%;
+}
+.tab__content input[type="radio"] {
+    display: none;
+}
+.tab__content input[type="radio"] + label {
+    display: inline-block;
+    min-width: 24.79%;
+    background-color: #ccc;
+    color: #999;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.tab__content input[type="radio"]:checked + label {
+    background-color: pink;
+    color: #00256c;
+}
+.conbox {
+    width: 100%;
+    height: 600px;
+    background-color: var(--color-light);
+    display: none;
+    margin: 0 auto;
+}
+input[id="tab01"]:checked ~ .con1 {
+    display: block;
+}
+input[id="tab02"]:checked ~ .con2 {
+    display: block;
+}
+input[id="tab03"]:checked ~ .con3 {
+    display: block;
+}
+input[id="tab04"]:checked ~ .con4 {
+    display: block;
+}
