@@ -388,43 +388,107 @@
 
                 <div class="conbox con1">
                   <div class="con1__inner">
-                    <ul>
-                      <li><a href="#none">예매</a></li>
-                      <li><a href="#none">마일리지 예매</a></li>
-                    </ul>
+                    <div class="reserve__top">
+                      <ul>
+                        <li><button type="button">예매</button></a></li>
+                        <li><button type="button">마일리지 예매</button></a></li>
+                      </ul>
 
-                    <div class="air__way">
-                      <div class="air__way_radio">
-                        <input type="radio" name="ticket" id="way01">
-                        <label for="way01" tabindex="0">왕복</label>
+                      <div class="reserve__way">
+                        <div>
+                          <input type="radio" name="ticket" id="way01" checked/>
+                          <label for="way01" tabindex="0">왕복</label>
 
-                        <input type="radio" name="ticket" id="way02">
-                        <label for="way02" tabindex="0">편도</label>
-                      </div>
-                      <div>
-                        <a href="#none">다구간</a>
+                          <input type="radio" name="ticket" id="way02" />
+                          <label for="way02" tabindex="0">편도</label>
+
+                          <div>
+                            <a href="#none">다구간</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
-                    <div class="air__way_reserve">
+                    <div class="reserve__bottom">
                       <div>
-                        <ul>
+                        <ul class="re__bottom_lf">
                           <li>
                             <span>From</span>
                             <span>출발지</span>
+                          </li>
+                          <li>
+                            <button type="button"></button>
                           </li>
                           <li>
                             <span>To</span>
                             <span>도착지</span>
                           </li>
                         </ul>
+
+                        <div class="re__bottom_rt">
+                          <ul>
+                            <li>
+                              <p>출발일</p>
+                              <button>
+                                <span class="select_date">
+                                  <span>가는 날</span>
+                                  <span> &#126; </span>
+                                  <span>오는 날</span>
+                                </span>
+                              </button>
+                            </li>
+                            <li>
+                              <p>탑승객</p>
+                              <button>
+                                <span class="select_date">
+                                  <span>성인</span>
+                                  <span>1명</span>
+                                </span>
+                              </button>
+                            </li> 
+                            <li>
+                              <p>좌석 등급</p>
+                              <button>
+                                <span class="select_date">선택하세요.</span>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button">항공편 검색</button>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-
-
                     </div>
                   </div>
                 </div>
-                <div class="conbox con2">컨텐츠탭 내용2</div>
+
+                <div class="conbox con2">
+                  <div class="con2__inner">
+                    <ul>
+                      <li>
+                        <p>예약번호 또는 항공권번호</p>
+                        <input type="text" maxlength="13" placeholder="예&#41; A1B2C3 또는 1801234567890"/>
+                      </li>
+                      <li>
+                        <p>출발일</p>
+                        <button type="button">
+                          <span></span>
+                        </button>
+                      </li>
+                      <li>
+                        <p>승객 성</p>
+                        <input type="text">
+                      </li>
+                      <li>
+                        <p>승객 이름</p>
+                        <input type="text">
+                      </li>
+                      <li>
+                        <button type="button">조회</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <div class="conbox con3">컨텐츠탭 내용3</div>
                 <div class="conbox con4">컨텐츠탭 내용4</div>
               </div>
@@ -447,5 +511,4 @@
     <script src="./src/header.js" defer></script>
     <script src="./src/main.js" defer></script>
 
-  </body>
-</html>
+  </bo

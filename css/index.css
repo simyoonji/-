@@ -73,6 +73,7 @@
 .air__reservation_content {
     width: 100%;
 }
+
 .tab__content {
     position: relative;
     display: flex;
@@ -80,11 +81,21 @@
     white-space: nowrap;
     width: 100%;
 }
+.tab__content::before {
+    position: absolute;
+    display: block;
+    top: 5.4rem;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    content: "";
+    background-color: var(--color-gray);
+}
 .tab__content > input[type="radio"] {
     display: none;
 }
-
 .tab__content > input[type="radio"] + label {
+    position: relative;
     display: inline-block;
     width: 25%;
     padding: 2rem 0;
@@ -97,7 +108,7 @@
     font-weight:700;
     cursor: pointer;
 }
-.tab__content > input[type="radio"] + label::after {
+.tab__content > input[type="radio"]:checked + label::after {
     position: absolute;
     display: block;
     content: '';
@@ -116,14 +127,18 @@
     color: var(--color-black);
     text-decoration: underline;
 }
+
+
+/* tab contents */
+
 .conbox {
     display: none;
     position: absolute;
     left: 0;
     top: 5.5rem;
     width: 100%;
-    min-height: 23rem;
-    padding: 3rem 4rem 1rem;
+    min-height: 21.34rem;
+    padding: 2.2rem 4rem 3.8rem;
     box-sizing: border-box;
     background-color: var(--color-light);
     border-radius: 2rem;
@@ -144,9 +159,268 @@ input[id="tab04"]:checked ~ .con4 {
     display: block;
 }
 
-.con1__inner {
-    border: 1px solid red;
+/* con1 contents*/
+.reserve__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.5rem;
 }
-.con1__inner > ul {
+.reserve__top > ul {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #d9dbe1;
+    border-radius: 3.2rem;
+}
+.reserve__top > ul > li {
+    padding: 0.8rem 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.reserve__top > ul > li:nth-of-type(1) {
+    border-radius: 3.2rem;
+    transition: all .2s ease-in;
+    background-color: var(--color-indigo);
+}
+.reserve__top > ul > li > button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.reserve__top > ul > li:nth-of-type(1) > button {
+    color: var(--color-light);
+    font-weight: bold;
+}
+.reserve__top > ul > li:nth-of-type(2) > button {
+    color: var(--color-indigo);
+}
+.reserve__top > ul > li > button:hover {
+    text-decoration: underline;
+}
+.reserve__way {
+    font-size: 1.6rem;
+    margin-left: 4.5rem;
+}
+.reserve__way > div {
     display: flex;
 }
+.reserve__way > div > input[type="radio"] {
+    display: none;
+}
+.reserve__way > div > input[type="radio"] + label {
+    position: relative;
+    margin-right: 2.3rem;
+    padding: 0.4rem 0.2rem 0.9rem;
+    box-sizing: border-box;
+    color: #555;
+    border-radius: 0.3rem;
+}
+.reserve__way > div > input[type="radio"]:checked + label {
+    color: var(--color-indigo);
+    font-weight: bold;
+}
+.reserve__way > div > input[type="radio"]:checked + label::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #de001b;
+    border-radius: 0.2rem;
+}
+.reserve__way > div > div {
+    line-height: 24px;
+}
+.reserve__way > div > div > a {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 0 1.5rem 0 0.2rem ;
+    box-sizing: border-box;
+    color: #555;
+    border-radius: 0.3rem;
+}
+.reserve__way > div > div > a::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-left: 1px solid #555;
+    border-bottom: 1px solid #555;
+    transform: rotate(225deg);
+    vertical-align: middle;
+}
+
+/* con1 reserve bottom */
+.reserve__bottom > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.reserve__bottom > div > ul {
+    display: flex;
+}
+.re__bottom_lf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+}
+.re__bottom_lf > li:nth-of-type(1),
+.re__bottom_lf > li:nth-of-type(3) {
+    min-width: 10rem;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.re__bottom_lf > li:nth-of-type(2) {
+    width: 20%;
+}
+.re__bottom_lf > li > span {
+    display: block;
+}
+.re__bottom_lf > li > span:first-of-type {
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+.re__bottom_lf > li > span:last-of-type {
+    font-size: 1.6rem;
+}
+.re__bottom_lf > li:nth-of-type(2) > button {
+    display: block;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin: 0 auto;
+    background: url('../images/icon/booking_swap.svg')center center no-repeat;
+    background-size: cover;
+    outline: none;
+    border: none;
+    cursor: not-allowed;
+}
+.re__bottom_rt {
+    width: 77%;
+}
+.re__bottom_rt > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.re__bottom_rt > ul > li:nth-of-type(1) {
+    width: 36rem;
+}
+.re__bottom_rt > ul > li:nth-of-type(2),
+.re__bottom_rt > ul > li:nth-of-type(3) {
+    width: 18rem;
+}
+.re__bottom_rt > ul > li:nth-of-type(4){
+    margin-right: 0;
+} 
+.re__bottom_rt > ul > li > p{
+    padding: 1rem 0;
+    box-sizing: border-box;
+    color: #767676;
+    font-size: 1.4rem;
+}
+.re__bottom_rt > ul > li > button {
+    position: relative;
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    text-align: start;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-black);
+    cursor: pointer;
+}
+.re__bottom_rt > ul > li:nth-of-type(1) > button {
+    padding: 0.8rem 0;
+    box-sizing: border-box;
+}
+.select_date {
+    font-size: 1.6rem;
+    color: var(--color-gray);
+    transition: all .2s ease-in;
+}
+.re__bottom_rt > ul > li:nth-of-type(2) .select_date {
+    color: var(--color-dark);
+    font-weight: bold;
+}
+.re__bottom_rt > ul > li:nth-of-type(1) .select_date::before {
+    content: "";
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("../images/icon/quick__calendar.svg")center center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+.re__bottom_rt > ul > li:nth-of-type(2) > button::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("../images/icon/quick__passenger.svg")center center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+.re__bottom_rt > ul > li:nth-of-type(3) > button::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("../images/icon/quick__seatclass.svg")center center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+.re__bottom_rt > ul > li:nth-of-type(4) > button {
+    padding: 1.4rem 2rem;
+    box-sizing: border-box;
+    margin-top: 3rem;
+    background-color: var(--color-indigo);
+    color: var(--color-light);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+.re__bottom_rt > ul > li:nth-of-type(4):hover > button {
+    box-shadow: 0 0 0 0.2rem var(--color-light), 0 0 0 0.3rem var(--color-blue);
+}
+
+.re__bottom_rt > ul > li:hover .select_date {
+    padding-left: 1rem;
+}
+
+/* con2 contents */
+
+.con2__inner > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+.reserve__way > div > input[type="radio"] + label:hover,
+.reserve__way > div > div > a:hover,
+.re__bottom_lf > li:nth-of-type(1):hover,
+.re__bottom_lf > li:nth-of-type(3):hover,
+.re__bottom_rt > ul > li:hover > button {
+    box-shadow: inset 0 0 0 1px var(--color-blue);
+}
+
