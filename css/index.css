@@ -4,12 +4,14 @@
     --color-text: var(--color-blue);
     --color-light: var(--color-white);
     --color-blueGray: var(--color-gray);
+    --color-lightGray : var(--color-lightgray);
 
     --color-indigo : #00256c;
     --color-black : #000;
     --color-blue : #0064de;
     --color-white : #fff;
     --color-gray : #65728a;
+    --color-lightgray : #767676;
 }
 
 /* container area */
@@ -327,7 +329,7 @@ input[id="tab04"]:checked ~ .con4 {
 .re__bottom_rt > ul > li > p{
     padding: 1rem 0;
     box-sizing: border-box;
-    color: #767676;
+    color: var(--color-lightgray);
     font-size: 1.4rem;
 }
 .re__bottom_rt > ul > li > button {
@@ -395,24 +397,89 @@ input[id="tab04"]:checked ~ .con4 {
     border-radius: 1rem;
     font-size: 1.6rem;
 }
-
-.re__bottom_rt > ul > li:nth-of-type(4):hover > button {
-    box-shadow: 0 0 0 0.2rem var(--color-light), 0 0 0 0.3rem var(--color-blue);
-}
-
 .re__bottom_rt > ul > li:hover .select_date {
     padding-left: 1rem;
 }
 
 /* con2 contents */
-
+.con2__inner {
+    margin: 2.7rem 0 0;
+}
 .con2__inner > ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
+.con2__inner > ul > li {
+    white-space: nowrap;
+    word-break:break-all;
+}
+.con2__inner > ul > li:nth-of-type(1){
+    width: 27%;
+}
+.con2__inner > ul > li:nth-of-type(2){
+    width: 21%;
+}
+.con2__inner > ul > li:nth-of-type(3),
+.con2__inner > ul > li:nth-of-type(4) {
+    width: 15%;
+} 
+.con2__inner > ul > li:nth-of-type(5) {
+    width: 10%;
+}
+.con2__inner > ul > li > p {
+    padding: 1rem 0;
+    box-sizing: border-box;
+    text-align: start;
+    color: var(--color-lightgray);
+    font-size: 1.4rem;
+}
+.con2__inner > ul > li:nth-of-type(2) > p {
+    padding: 1rem 0 1.2rem 0;
+}
+.con2__inner > ul > li input,
+.con2__inner > ul > li:nth-of-type(2) button {
+    width: 100%;
+    height: 4.3rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid #767676;
+}
+.con2__inner > ul > li:nth-of-type(2) button {
+    position: relative;
+    cursor: pointer;
+}
+.con2__inner > ul > li:nth-of-type(2) button::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("../images/icon/quick__calendar.svg")center center no-repeat;
+    background-size: cover;
+    transition: all .2s ease-in;
+}
+.con2__inner > ul > li:nth-of-type(2):hover button::before {
+    left: 1rem;
+}
+.con2__inner > ul > li input::placeholder {
+    font-size: 1.6rem;
+}
+.con2__inner > ul > li:nth-of-type(5) > button {
+    width: 100%;
+    padding: 1.2rem 0;
+    box-sizing: border-box;
+    margin-top: 3rem;
+    background-color: var(--color-indigo);
+    color: var(--color-light);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+} 
 
 
 
@@ -420,7 +487,13 @@ input[id="tab04"]:checked ~ .con4 {
 .reserve__way > div > div > a:hover,
 .re__bottom_lf > li:nth-of-type(1):hover,
 .re__bottom_lf > li:nth-of-type(3):hover,
-.re__bottom_rt > ul > li:hover > button {
+.re__bottom_rt > ul > li:hover > button,
+.con2__inner > ul > li:hover input,
+.con2__inner > ul > li:nth-of-type(2):hover button  {
     box-shadow: inset 0 0 0 1px var(--color-blue);
 }
 
+.re__bottom_rt > ul > li:nth-of-type(4):hover > button,
+.con2__inner > ul > li:nth-of-type(5):hover > button {
+    box-shadow: 0 0 0 0.2rem var(--color-light), 0 0 0 0.3rem var(--color-blue);
+}
