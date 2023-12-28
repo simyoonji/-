@@ -386,6 +386,7 @@
 
                 <!-- content 내용 -->
 
+                <!-- con1 -->
                 <div class="conbox con1">
                   <div class="con1__inner">
                     <div class="reserve__top">
@@ -462,8 +463,9 @@
                   </div>
                 </div>
 
+                <!-- con2 -->
                 <div class="conbox con2">
-                  <div class="con2__inner">
+                  <div class="con__inner">
                     <ul>
                       <li>
                         <p>예약번호 또는 항공권번호</p>
@@ -497,22 +499,43 @@
                         <button type="button">조회</button>
                       </li>
                     </ul>
+
+                    <div class="caption">
+                      <p>국내선 한글 예약인 경우,한글 성과 이름을 입력하세요.</p>
+                    </div>
                   </div>
                 </div>
+
+                <!-- con3 -->
                 <div class="conbox con3">
-                  <div class="con2__inner">
+                  <div class="con__inner">
                     <ul>
                       <li>
                         <p>예약번호 또는 항공권번호</p>
                         <form action="#">
                           <fieldset>
-                            <input type="text" maxlength="13" placeholder="예&#41; A1B2C3 또는 1801234567890"/>
+                            <input type="text" maxlength="13" placeholder="예&#41; 123ABC 또는 12345678" />
                           </fieldset>
                         </form>
                       </li>
                       <li>
                         <p>출발일</p>
-                          <button type="button"></button>
+                          <div class="forms">
+                            <select name="select" id="select_date">
+                              <option value="0">
+                                2023년12월27일
+                              </option>
+                              <option value="1" selected>
+                                2023년12월28일
+                              </option>
+                              <option value="3">
+                                2023년12월29일
+                              </option>
+                              <option value="4">
+                                2023년12월30일
+                              </option>
+                            </select>
+                          </div>
                       </li>
                       <li>
                         <p>승객 성</p>
@@ -534,9 +557,65 @@
                         <button type="button">조회</button>
                       </li>
                     </ul>
+
+                    <div class="caption">
+                      <p>국내선 한글 예약인 경우,한글 성과 이름을 입력하세요.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="conbox con4">
+                  <div class="con4__inner">
+                    <div class="reserve__top">
+                      <ul>
+                        <li><button type="button">출도착 현황</button></a></li>
+                        <li><button type="button">주간 스케줄</button></a></li>
+                      </ul>
+
+                      <div class="reserve__way">
+                        <div>
+                          <input type="radio" name="ticket2" id="way03" checked/>
+                          <label for="way03" tabindex="0">출&#47;도착지</label>
+
+                          <input type="radio" name="ticket2" id="way04" />
+                          <label for="way04" tabindex="0">편명</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reserve__bottom">
+                      <div>
+                        <ul class="re__bottom_lf">
+                          <li>
+                            <span>From</span>
+                            <span>출발지</span>
+                          </li>
+                          <li>
+                            <button type="button"></button>
+                          </li>
+                          <li>
+                            <span>To</span>
+                            <span>도착지</span>
+                          </li>
+                        </ul>
+
+                        <div class="re__bottom_rt">
+                          <ul>
+                            <li>
+                              <p>출발일</p>
+                              <button>
+                                <span class="select_date con4Date">
+                                  <span>2023년</span>
+                                  <span>12월</span>
+                                  <span>28일</span>
+                                </span>
+                              </button>
+                            </li>
+                          </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="conbox con4">컨텐츠탭 내용4</div>
               </div>
             </div>
 

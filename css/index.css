@@ -3,14 +3,16 @@
     --color-dark: var(--color-black);
     --color-text: var(--color-blue);
     --color-light: var(--color-white);
-    --color-blueGray: var(--color-gray);
+    --color-blueGray: var(--color-bluegray);
+    --color-darkGray : var(--color-darkGray);
     --color-lightGray : var(--color-lightgray);
 
     --color-indigo : #00256c;
     --color-black : #000;
     --color-blue : #0064de;
     --color-white : #fff;
-    --color-gray : #65728a;
+    --color-bluegray : #65728a;
+    --color-darkgray : #555;
     --color-lightgray : #767676;
 }
 
@@ -174,7 +176,8 @@ input[id="tab04"]:checked ~ .con4 {
     border-radius: 3.2rem;
 }
 .reserve__top > ul > li {
-    padding: 0.8rem 2rem;
+    min-width: auto;
+    padding: 0.8rem 1.5rem;
     box-sizing: border-box;
     text-align: center;
     font-size: 1.6rem;
@@ -189,6 +192,7 @@ input[id="tab04"]:checked ~ .con4 {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    font-size: 1.6rem;
 }
 .reserve__top > ul > li:nth-of-type(1) > button {
     color: var(--color-light);
@@ -215,7 +219,7 @@ input[id="tab04"]:checked ~ .con4 {
     margin-right: 2.3rem;
     padding: 0.4rem 0.2rem 0.9rem;
     box-sizing: border-box;
-    color: #555;
+    color: var(--color-darkGray);
     border-radius: 0.3rem;
 }
 .reserve__way > div > input[type="radio"]:checked + label {
@@ -241,7 +245,7 @@ input[id="tab04"]:checked ~ .con4 {
     height: 100%;
     padding: 0 1.5rem 0 0.2rem ;
     box-sizing: border-box;
-    color: #555;
+    color: var(--color-darkGray);
     border-radius: 0.3rem;
 }
 .reserve__way > div > div > a::after {
@@ -252,8 +256,8 @@ input[id="tab04"]:checked ~ .con4 {
     top: 30%;
     width: 0.6rem;
     height: 0.6rem;
-    border-left: 1px solid #555;
-    border-bottom: 1px solid #555;
+    border-left: 1px solid var(--color-darkGray);
+    border-bottom: 1px solid var(--color-darkGray);
     transform: rotate(225deg);
     vertical-align: middle;
 }
@@ -292,6 +296,7 @@ input[id="tab04"]:checked ~ .con4 {
     margin-bottom: 1rem;
     font-size: 3.2rem;
     font-weight: bold;
+    color: var(--color-lightGray);
 }
 .re__bottom_lf > li > span:last-of-type {
     font-size: 1.6rem;
@@ -350,7 +355,7 @@ input[id="tab04"]:checked ~ .con4 {
 }
 .select_date {
     font-size: 1.6rem;
-    color: var(--color-gray);
+    color: var(--color-lightGray);
     transition: all .2s ease-in;
 }
 .re__bottom_rt > ul > li:nth-of-type(2) .select_date {
@@ -401,56 +406,58 @@ input[id="tab04"]:checked ~ .con4 {
     padding-left: 1rem;
 }
 
-/* con2 contents */
-.con2__inner {
+/* con contents */
+.con__inner {
     margin: 2.7rem 0 0;
 }
-.con2__inner > ul {
+.con__inner > ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.con2__inner > ul > li {
+.con__inner > ul > li {
     white-space: nowrap;
     word-break:break-all;
+    transition: all 0.2s ease-in;
 }
-.con2__inner > ul > li:nth-of-type(1){
+.con__inner > ul > li:nth-of-type(1){
     width: 27%;
 }
-.con2__inner > ul > li:nth-of-type(2){
+.con__inner > ul > li:nth-of-type(2){
     width: 21%;
 }
-.con2__inner > ul > li:nth-of-type(3),
-.con2__inner > ul > li:nth-of-type(4) {
+.con__inner > ul > li:nth-of-type(3),
+.con__inner > ul > li:nth-of-type(4) {
     width: 15%;
 } 
-.con2__inner > ul > li:nth-of-type(5) {
+.con__inner > ul > li:nth-of-type(5) {
     width: 10%;
 }
-.con2__inner > ul > li > p {
+.con__inner > ul > li > p {
     padding: 1rem 0;
     box-sizing: border-box;
     text-align: start;
     color: var(--color-lightgray);
     font-size: 1.4rem;
 }
-.con2__inner > ul > li:nth-of-type(2) > p {
+.con__inner > ul > li:nth-of-type(2) > p {
     padding: 1rem 0 1.2rem 0;
 }
-.con2__inner > ul > li input,
-.con2__inner > ul > li:nth-of-type(2) button {
+.con__inner > ul > li input,
+.con__inner > ul > li:nth-of-type(2) button {
     width: 100%;
     height: 4.3rem;
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: 0.1rem solid #767676;
+    border-bottom: 0.1rem solid var(--color-lightGray);
+    transition: all 0.2s ease-in;
 }
-.con2__inner > ul > li:nth-of-type(2) button {
+.con__inner > ul > li:nth-of-type(2) button {
     position: relative;
     cursor: pointer;
 }
-.con2__inner > ul > li:nth-of-type(2) button::before {
+.con__inner > ul > li:nth-of-type(2) button::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -463,13 +470,13 @@ input[id="tab04"]:checked ~ .con4 {
     background-size: cover;
     transition: all .2s ease-in;
 }
-.con2__inner > ul > li:nth-of-type(2):hover button::before {
+.con__inner > ul > li:nth-of-type(2):hover button::before {
     left: 1rem;
 }
-.con2__inner > ul > li input::placeholder {
+.con__inner > ul > li input::placeholder {
     font-size: 1.6rem;
 }
-.con2__inner > ul > li:nth-of-type(5) > button {
+.con__inner > ul > li:nth-of-type(5) > button {
     width: 100%;
     padding: 1.2rem 0;
     box-sizing: border-box;
@@ -480,6 +487,66 @@ input[id="tab04"]:checked ~ .con4 {
     font-size: 1.6rem;
     cursor: pointer;
 } 
+/* con3 select 부분 */
+.forms {
+    width: 100%;
+    border-bottom: 0.1rem solid var(--color-lightGray);
+}
+.forms > select {
+    width: 100%;
+    height: 4.3rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-dark);
+    transition: all 0.2s ease-in;
+    appearance: none;
+    background: url("../images/icon/select.svg")right center no-repeat;
+}
+.forms:hover > select {
+    padding: 0 0 0 1rem;
+    box-sizing: border-box;
+    background-position: calc(100% - 1rem) center;
+}
+/* caption */
+.caption {
+    padding: 0.9rem 13.28% 0 54%;
+    box-sizing: border-box;
+}
+.caption > p {
+    font-size: 1.2rem;
+    color: var(--color-darkGray);
+}
+.caption > p::before {
+    content: '';
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.4rem;
+    background: url("../images/icon/caption.svg")center center no-repeat;
+    background-size: cover;
+    vertical-align: -0.3rem;
+}
+/* con4 */
+.con4__re_bottom_rt {
+    width: 80%;
+    margin-left: 3rem;
+    border: 1px solid red;
+}
+.con4__re_bottom_rt > p {
+    padding: 1rem 0;
+    box-sizing: border-box;
+    color: var(--color-lightgray);
+    font-size: 1.4rem;
+}
+.con4Date {
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+
 
 
 
@@ -488,12 +555,13 @@ input[id="tab04"]:checked ~ .con4 {
 .re__bottom_lf > li:nth-of-type(1):hover,
 .re__bottom_lf > li:nth-of-type(3):hover,
 .re__bottom_rt > ul > li:hover > button,
-.con2__inner > ul > li:hover input,
-.con2__inner > ul > li:nth-of-type(2):hover button  {
+.con__inner > ul > li:hover input,
+.con__inner > ul > li:nth-of-type(2):hover button,
+.forms:hover > select  {
     box-shadow: inset 0 0 0 1px var(--color-blue);
 }
 
 .re__bottom_rt > ul > li:nth-of-type(4):hover > button,
-.con2__inner > ul > li:nth-of-type(5):hover > button {
+.con__inner > ul > li:nth-of-type(5):hover > button {
     box-shadow: 0 0 0 0.2rem var(--color-light), 0 0 0 0.3rem var(--color-blue);
 }

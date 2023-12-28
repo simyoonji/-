@@ -40,9 +40,11 @@
     vertical-align: top;
 }
 .lang__event > a {
+    white-space: nowrap;
     background: url("../images/icon/lang-event.svg") left 60%/16px 16px no-repeat;
 }
 .lang__customer > a {
+    white-space: nowrap;
     background: url("../images/icon/lang-customer.svg") left 60%/16px 16px no-repeat;
 }
 .lang__insert > button {
@@ -268,6 +270,7 @@
     color: #767676;
     background: #f3f4f8;
     cursor: pointer;
+    white-space: nowrap;
 }
 .nav__search > button::before {
     content: "";
@@ -297,6 +300,7 @@
     color: var(--color-light);
     cursor: pointer;
     border: 1px solid transparent;
+    white-space: nowrap;
 }
 .nav__search > div > a:hover {
     box-shadow: 0 0 0 0.2rem var(--color-light), 0 0 0 0.3rem var(--color-blue);
