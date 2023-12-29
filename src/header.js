@@ -19,7 +19,6 @@ const HIDE = "hide";
 const ON = "on";
 
 // search 보이기,숨기기
-
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -29,7 +28,8 @@ searchBtn.addEventListener("click", (e) => {
 
     search.classList.add(SHOW)
     searchBox.classList.add(SHOW);
-    
+
+    document.body.style.overflowY = "hidden";
 });
 
 //search box 닫기 버튼 - 1
@@ -45,14 +45,19 @@ searchBoxBtn.addEventListener("click", (e) => {
     clearBtnHide();
     empty();
     searchInput.value = "";
+
+    document.body.style.overflowY = "auto";
 });
 
-//search box 닫기 버튼 - 2
+
+//search box 닫기 - 2
 window.addEventListener('click', (e) => { 
     e.target === search ? search.classList.remove(SHOW) : false;
     e.target === search ? lang.classList.remove(HIDE) : false;
     e.target === search ? navMenu.classList.remove(HIDE) : false;
     e.target === search ? navSearch.classList.remove(HIDE) : false;
+    e.target === search ? document.body.style.overflowY = "auto" : false;
+
     clearBtnHide();
     empty();
     searchInput.value = "";
