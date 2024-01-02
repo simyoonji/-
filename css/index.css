@@ -4,7 +4,7 @@
     --color-text: var(--color-blue);
     --color-light: var(--color-white);
     --color-blueGray: var(--color-bluegray);
-    --color-darkGray : var(--color-darkGray);
+    --color-darkGray : var(--color-darkgray);
     --color-lightGray : var(--color-lightgray);
 
     --color-indigo : #00256c;
@@ -770,7 +770,7 @@ input[id="tab04"]:checked ~ .con4 {
 #affiliate .affiliate__inner {
     max-width: 128rem;
     margin: 0 auto;
-    padding-bottom: 5rem;
+    padding: 0 2rem 5rem;
     color: var(--color-dark);
     transition: .3s;
     transition-timing-function: ease-out;
@@ -787,8 +787,8 @@ input[id="tab04"]:checked ~ .con4 {
 }
 .affiliate__list {
     position: relative;
-    min-width: 17.5rem;
-    min-height: 13rem;
+    width: 17.5rem;
+    height: 13rem;
     padding: 2rem;
     box-sizing: border-box;
     text-align: center;
@@ -835,6 +835,7 @@ input[id="tab04"]:checked ~ .con4 {
     background: var(--color-light);
     border-radius: 1rem;
     border: none;
+    text-align: center;
 }
 .affiliate__list_sub > ul::after {
     content: '';
@@ -850,30 +851,177 @@ input[id="tab04"]:checked ~ .con4 {
     border-color: var(--color-light) transparent;
     border-style: solid;
 }
-
 .affiliate__list_sub > ul > li {
-    padding: 1.4rem 2.4rem;
-    box-sizing: border-box;
-    white-space: nowrap;
 }
 .affiliate__list_sub > ul > li > a {
     display: block;
     font-size: 1.4rem;
+    padding: 1.4rem 2.4rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.deco> ul > li {
+    position: relative;
+}
+.deco> ul > li::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.1rem;
+    height: 2rem;
+    background-color: #dddddd;
+}
+.deco> ul > li:last-of-type::after {
+    content: none;
 }
 .affiliate__list:hover .affiliate__list_sub {
     display: block;
 }
 
-/* section company */
+/* footer area */
+#footer {
+    width: 100%;
+    height: auto;
+}
 
+/* footer company area */
 #company {
     padding: 3.9rem 2rem 3.5rem;
     border-top: 1px solid #d9dbe1;
     background-color: #f3f4f8;
 }
+#company > div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 128rem;
+    margin: 0 auto;
+}
+#company .company__inserted {
+    width: 72%;
+}
+.company__inserted > ul {
+    display: flex;
+}
+.company__inserted > ul > li {
+    width: 28%;
+    padding-right: 1rem;
+}
+.company__inserted > ul > li > h6 {
+    font-size: 1.6rem;
+    margin: 1.6rem 0;
+    color: var(--color-dark);
+}
+ul.inserted_list > li {
+    height: 2.2rem;
+    line-height: 2.2rem;
+    margin: 0.2rem 0;
+}
+ul.inserted_list > li > a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--color-darkGray);
+}
+
+/* footer company - sns area */
+.sns {
+    width: 25%;
+}
+.sns ul:first-of-type {
+    display: flex;
+    justify-content: end;
+}
+.sns ul:first-of-type > li {
+    padding-left: 0.8rem;
+    box-sizing: border-box;
+}
+.sns ul:first-of-type > li > a {
+    width: 4.4rem;
+    height: 4.4rem;
+}
+.sns ul:last-of-type {
+    display: flex;
+    justify-content: end;
+}
+.sns ul:last-of-type > li {
+    padding-left: 1.8rem;
+    box-sizing: border-box;
+}
+.sns ul:last-of-type > li > a {
+    width: 11.8rem;
+    height: 3.4rem;
+    vertical-align: top;
+}
+
+/* footer contact area */
+#contact {
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: var(--color-light);
+}
+#contact > div {
+    max-width: 128rem;
+    margin: 0 auto;
+    font-size: 1.4rem;
+}
+#contact > div > div {
+    display: flex;
+    justify-content: space-between;
+}
+.contact__lf {
+    width: 60%;
+    font-size: 1.4rem;
+}
+.contact__lf ul {
+    width: 100%;
+}
+.contact__lf ul > li {
+    float: left;
+    margin-right: 1rem;
+    word-break: keep-all;
+    white-space: nowrap;
+    color: var(--color-lightgray);
+    margin-right: 1rem;
+    line-height: 1.5;
+}
+.contact__lf  ul > li > strong {
+    color:var(--color-main);
+    margin-right: 1.3rem;
+}
+.contact__lf ul > li::after {
+    content: "";
+    display: inline-block;
+    width: 0.1rem;
+    height: 1.1rem;
+    margin-left: 1rem;
+    background-color: #d9dbe1;
+}
+.contact__lf ul > li:nth-of-type(3):after,
+.contact__lf ul > li:nth-of-type(6):after {
+    content: none;
+}
 
 
+.contact__rt ul {
+    display: flex;
+}
+.contact__rt ul > li {
+   padding: 1rem 0;
+   box-sizing: border-box;
+}
 
+.contact__rt ul > li > a {
+    width: 7rem;
+    height: 7rem;
+}
+#contact div > p {
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-darkGray);
+    
+}
 
 /* main 영역 중복 hover */
 .reserve__way > div > input[type="radio"] + label:hover,
@@ -897,7 +1045,8 @@ input[id="tab04"]:checked ~ .con4 {
 .air__information > div:first-of-type > span:hover,
 .notice__list ul > li:hover > a,
 .affiliate__list:hover > a > p,
-.affiliate__list_sub ul > li:hover > a  {
+.affiliate__list_sub ul > li:hover > a,
+ul.inserted_list > li:hover > a {
     text-decoration: underline;
 }
  
