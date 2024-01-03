@@ -3,16 +3,25 @@
     --color-dark: var(--color-black);
     --color-text: var(--color-blue);
     --color-light: var(--color-white);
+    --color-blueGray: var(--color-bluegray);
+    --color-darkGray : var(--color-darkgray);
+    --color-lightGray : var(--color-lightgray);
 
     --color-indigo : #00256c;
     --color-black : #000;
     --color-blue : #0064de;
     --color-white : #fff;
+    --color-bluegray : #65728a;
+    --color-darkgray : #555;
+    --color-lightgray : #767676;
 }
+
 /* header */
 #header {
     max-width: 128rem;
     height: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
     margin: 0 auto;
     font-family: 'Noto Sans KR', sans-serif;
     background-color: var(--color-light);
