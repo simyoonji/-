@@ -99,7 +99,7 @@
 .nav__menu {
     opacity: 1;
     visibility: visible;
-   margin-left: 7rem;
+    margin-left: 7rem;
 }
 .nav__menu_list {
     display: flex;
@@ -148,14 +148,19 @@
     display: none;
     position: absolute;
     top: 7rem;
-    left: 0;
+    left: 50%;
     right: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 128rem;
+    
     padding: 6rem 6rem 5rem;
     box-sizing: border-box;
     margin: 0 auto;
     background: #f8f9fc;
     outline: 0;
     z-index: 998;
+    box-shadow: 0 0.6rem 1rem 0 rgba(39,40,44,.1);
 }
 .nav__menu_list > li:hover .nav__menu_sub {
     display: block;
@@ -186,13 +191,13 @@
     margin: 0 2rem 2rem 0;
 }
 #sub_lf_cabin > li {
-    min-height: 38.4rem;
+    min-height: 32.4rem;
 }
 .sub__lf > ul > li {
-    width: 23.5%;
+    width: 23%;
     max-width: 27.5rem;
     min-height: 25.4rem;
-    padding: 3rem;
+    padding: 3rem 3.5%;
     border-radius: 0.6rem;
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .1);
     margin: 0 2rem 0 0;
@@ -499,6 +504,22 @@
     box-shadow: inset 0 0 0 1px var(--color-blue);
 }
 
+/* mobile menu open button */
+.m__trigger {
+    display: none;
+    visibility: hidden;
+}
+.m__trigger > button {
+    width: 4rem;
+    height: 4rem;
+    background:url(../images/icon/menu-trigger.svg)center center no-repeat;
+    background-position: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* 공용 hover 모음. */
 .nav__search > button:hover,
 .search__log > ul > li > span:hover,
 .search__log > ul > li > button:hover::after,

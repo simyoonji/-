@@ -1,0 +1,68 @@
+@media screen and (max-width:1280px){
+    .nav__menu_sub {
+        width: 100vw;
+    }
+}
+@media screen and (max-width:1060px){
+    /* header */
+#header {
+    width: 100%;
+
+}
+.lang {
+    display: none;
+    visibility: hidden;
+}
+
+.nav__logo > div > a {
+    display: none;
+    visibility: hidden;
+}
+.nav__menu {
+   display: none;
+} 
+.m__trigger {
+    display: block;
+    visibility: visible;
+}
+.air__information {
+    padding: 2rem 0;
+}
+.air__information > div:first-of-type {
+    margin-bottom: 1.6rem;
+}
+#banner {
+    min-height: 70rem;
+}
+.conbox {
+    padding: 3rem 2rem 2rem;
+}
+.reserve__top {
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.reserve__way {
+    margin-left: 0;
+    margin-top: 0.9rem;
+}
+
+.re__bottom_lf {
+    justify-content:space-evenly;
+    padding: 1.4rem 0;
+}
+.reserve__bottom > div {
+    flex-direction: column;
+}
+.re__bottom_rt {
+    width: 100%;
+}
+.re__bottom_rt > ul {
+    display: block;
+    width: 100%;
+}
+.re__bottom_rt > ul > li:nth-of-type(1),
+.re__bottom_rt > ul > li:nth-of-type(2),
+.re__bottom_rt > ul > li:nth-of-type(3) {
+    width: 100%;
+}
+}

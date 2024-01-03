@@ -257,7 +257,7 @@ input[id="tab04"]:checked ~ .con4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 20%;
+    margin-right: 1rem;
     text-align: center;
 }
 .re__bottom_lf > li:nth-of-type(1),
@@ -304,11 +304,11 @@ input[id="tab04"]:checked ~ .con4 {
 }
 
 .re__bottom_rt > ul > li:nth-of-type(1) {
-    width: 36rem;
+    width: 36%;
 }
 .re__bottom_rt > ul > li:nth-of-type(2),
 .re__bottom_rt > ul > li:nth-of-type(3) {
-    width: 18rem;
+    width: 18%;
 }
 .re__bottom_rt > ul > li:nth-of-type(4){
     margin-right: 0;
