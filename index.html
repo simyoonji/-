@@ -17,6 +17,7 @@
     <meta name="author" content="Yoonji" />
     <!-- favicon -->
     <link rel="shortcut icon" href="#" />
+
     <!-- CSS -->
     <link
     rel="stylesheet"
@@ -426,7 +427,7 @@
                         <div class="re__bottom_rt">
                           <ul>
                             <li>
-                              <p>출발일</p>
+                              <p class="hd">출발일</p>
                               <button>
                                 <span class="select_date">
                                   <span>가는 날</span>
@@ -493,7 +494,7 @@
                         </form>
                       </li>
                       <li>
-                        <button type="button">조회</button>
+                        <button type="button" class="check">조회</button>
                       </li>
                     </ul>
 
@@ -551,7 +552,7 @@
                         </form>
                       </li>
                       <li>
-                        <button type="button">조회</button>
+                        <button type="button" class="check">조회</button>
                       </li>
                     </ul>
 
@@ -599,15 +600,19 @@
 
                         <div class="re__bottom_rt">
                           <ul>
-                            <li>
+                            <li id="rt_datebox">
                               <p>출발일</p>
-                              <button>
+                              <button type="button">
                                 <span class="select_date con4Date">
                                   <span>2023년</span>
                                   <span>12월</span>
                                   <span>28일</span>
                                 </span>
                               </button>
+                            </li>
+                            <li id="inquiry">
+                              <p style="visibility: hidden;">&nbsp;</p>
+                              <span>조회</span>
                             </li>
                           </ul>
                       </div>

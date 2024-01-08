@@ -1,11 +1,12 @@
-const swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
-    slidesPerView: 3,
+    slidesPerView: 'auto',  
     spaceBetween: 30,
     debugger: true,
     centeredSlides: false,
+    
 
     // Navigation arrows
     navigation: {
@@ -13,3 +14,5 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     },
   });
+
+ 
