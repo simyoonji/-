@@ -733,6 +733,7 @@ input[id="tab04"]:checked ~ .con4 {
     height: fit-content;
     margin-top: 0;
     border-radius: 1rem;
+    cursor: pointer;
 }
 .notice__banner > div {
     width: 100%;
@@ -742,6 +743,9 @@ input[id="tab04"]:checked ~ .con4 {
     width: 100%;
     height: 100%;
     border-radius: 1rem
+}
+.notice__banner > div > img:nth-of-type(2) {
+    display: none;
 }
 .notice__banner > div > div {
     position: absolute;
@@ -784,7 +788,6 @@ input[id="tab04"]:checked ~ .con4 {
     transition: .3s;
     transition-timing-function: ease-out;
 }
-
 .affiliate__inner h2 {
     font-size: 2.8rem;
     margin-bottom: 3rem;
@@ -799,7 +802,7 @@ input[id="tab04"]:checked ~ .con4 {
     width: 17.5rem;
     height: 13rem;
     padding: 2rem;
-    margin-right: 2rem;
+    margin: 0 2rem 0 0;
     box-sizing: border-box;
     text-align: center;
     background-color: rgba(255,255,255,.5);
@@ -936,6 +939,7 @@ ul.inserted_list > li > a {
     font-size: 1.4rem;
     color: var(--color-darkGray);
 }
+.slide {display: block;}
 
 /* footer company - sns area */
 .sns {

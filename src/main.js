@@ -7,3 +7,7 @@ $(function(){
     });
 });
 
+
+$(".company__inserted > ul > li").click(function(){
+    $(this).find('.inserted_list').slideToggle();
+});
