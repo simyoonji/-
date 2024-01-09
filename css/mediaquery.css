@@ -111,19 +111,15 @@
 #company {padding: 0.6rem 2rem 2.3rem;}
 #company > div {flex-direction: column;justify-content: inherit;max-width: inherit;}
 #company .company__inserted {width: 100%;}
-.company__inserted > ul {display: block;}
+.inserted-pc {display: none;}
 .company__inserted > ul > li {width: 100%; cursor: pointer;}
 .company__inserted > ul > li > h6 {font-size: 1.4rem; padding: 1.4rem 5rem 1.4rem 1rem; box-sizing: border-box; margin: 0rem 0;}
-ul.inserted_list {display: none;}
-ul.inserted_list > li {height: inherit;
-    line-height: inherit;
-    padding: 0.5rem 0rem;
-    box-sizing: border-box;
+
+.inserted-m {display: block;}
+
+#affiliate.active {
+    padding-bottom: 0rem;
 }
-
-
-.company__inserted > ul > li:hover > h6 {text-decoration: underline;}
-
 
 
 

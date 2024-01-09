@@ -775,7 +775,7 @@ input[id="tab04"]:checked ~ .con4 {
     background: #d0e7f6;
     overflow: hidden;
 }
-.active {
+#affiliate.active {
     padding-bottom: 3rem;
     transition: .3s;
     transition-timing-function: ease-out;
@@ -918,29 +918,40 @@ input[id="tab04"]:checked ~ .con4 {
 #company .company__inserted {
     width: 74%;
 }
-.company__inserted > ul {
+.inserted-pc {
     display: flex;
 }
-.company__inserted > ul > li {
+.inserted-pc > li {
     width: 30%;
 }
-.company__inserted > ul > li > h6 {
+.inserted-pc > li > h6 {
     font-size: 1.6rem;
     margin: 1.6rem 0;
     color: var(--color-dark);
 }
-ul.inserted_list > li {
+/* inserted_list */
+.inserted_list-pc > li {
     height: 2.2rem;
     line-height: 2.2rem;
     margin: 0.2rem 0;
 }
-ul.inserted_list > li > a {
+.inserted_list-pc > li > a,
+.inserted_list-m > li > a {
     display: block;
     font-size: 1.4rem;
     color: var(--color-darkGray);
 }
-.slide {display: block;}
-
+.inserted-m {display: none;}
+.inserted_list-m {
+    display: none;
+}
+.inserted_list-m > li {
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    color: var(--color-darkGray);
+}
+.inserted_list-m.slide {display: block;}
 /* footer company - sns area */
 .sns {
     width: 25%;
@@ -1086,7 +1097,9 @@ ul.inserted_list > li > a {
 .notice__list ul > li:hover > a,
 .affiliate__list:hover > a > p,
 .affiliate__list_sub ul > li:hover > a,
-ul.inserted_list > li:hover > a {
+.inserted_list-pc > li:hover > a,
+.inserted-m > li:hover > h6,
+.inserted_list-m > li:hover > a {
     text-decoration: underline;
 }
  
