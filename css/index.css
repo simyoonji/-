@@ -435,8 +435,10 @@ input[id="tab04"]:checked ~ .con4 {
     width: 100%;
     height: 4.3rem;
     background-color: var(--color-transParent);
-    border-bottom: 0.1rem solid var(--color-lightGray);
     transition: all 0.2s ease-in;
+    border: none;
+    outline: none;
+    border-bottom: 0.1rem solid var(--color-lightGray);
 }
 .con__inner > ul > li:nth-of-type(2) button {
     position: relative;

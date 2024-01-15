@@ -158,9 +158,21 @@ if(localStorageKey !== null){
 
 const mobileMenuOpen = document.querySelector("#m__trigger");
 const mobileMenu = document.querySelector("#nav__menu-m");
+const mobileMenuClose = document.querySelector(".menu-m_hd > span:nth-of-type(2) > button:last-of-type");
 
-mobileMenuOpen.addEventListener("click",(e) => {
-    e.preventDefault();
+mobileMenuOpen.addEventListener("click",() => {
     mobileMenu.classList.add(ON);
-    console.log("버튼누름");
 });
+mobileMenuClose.addEventListener("click",() => {
+    mobileMenu.classList.remove(ON);
+});
+
+$(window).resize(function(){
+    if($(window).width() > 1060){
+        mobileMenu.classList.remove(ON);
+    }else{
+    }
+
+});
+
+// mobile list tab
