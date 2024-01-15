@@ -8,7 +8,8 @@ const searchInput = searchBox.querySelector("input");
 
 const searchBtn = document.querySelector(".search_btn");
 const searchClearBtn = searchBox.querySelector(".search_clear");
-const searchBoxBtn = searchBox.querySelector("button");
+const searchClearBtnTop = searchBox.querySelector(".search__box_close > button");
+const searchBoxBtn = searchBox.querySelector(".search__box_btn > button");
 
 const logList = document.querySelector(".search__log_list");
 const localLog = [];
@@ -32,6 +33,23 @@ searchBtn.addEventListener("click", (e) => {
     document.body.style.overflowY = "hidden";
 });
 
+//search box 닫기 버튼 Top - 1
+searchClearBtnTop.addEventListener("click", (e) => { 
+    e.preventDefault();
+
+    lang.classList.remove(HIDE);
+    navMenu.classList.remove(HIDE);
+    navSearch.classList.remove(HIDE);
+    search.classList.remove(SHOW)
+    searchBox.classList.remove(SHOW);
+
+    clearBtnHide();
+    empty();
+    searchInput.value = "";
+
+    document.body.style.overflowY = "auto";
+});
+
 //search box 닫기 버튼 - 1
 searchBoxBtn.addEventListener("click", (e) => { 
     e.preventDefault();
@@ -48,7 +66,6 @@ searchBoxBtn.addEventListener("click", (e) => {
 
     document.body.style.overflowY = "auto";
 });
-
 
 //search box 닫기 - 2
 window.addEventListener('click', (e) => { 
@@ -137,3 +154,13 @@ if(localStorageKey !== null){
     parse.forEach(makeSearchLog);
 };
 
+// mobile menu open
+
+const mobileMenuOpen = document.querySelector("#m__trigger");
+const mobileMenu = document.querySelector("#nav__menu-m");
+
+mobileMenuOpen.addEventListener("click",(e) => {
+    e.preventDefault();
+    mobileMenu.classList.add(ON);
+    console.log("버튼누름");
+});

@@ -11,11 +11,64 @@
 /* header */
 #header {width: 100%;}
 .lang {display: none;visibility: hidden;}
-/* logo */
+/* nav logo */
 .nav__logo > div > a {display: none;visibility: hidden;}
 .nav__menu {display: none;} 
+/* nav search */
+.nav__search > button {width: 4.4rem; height: 4.4rem; padding: 0 0rem 0 0rem;
+    margin: 0 0.2rem 0 0; border-radius: 0.5rem; background: var(--color-transParent);}
+.nav__search > button > span {display: none;}
+.nav__search > button > img {display: block; margin-left: 0.8rem;}
+.nav__search > button::before {display: none;}
+.search_login {height: 2.4rem; line-height: 2.4rem; margin: 0 0rem 0 0rem;
+    border-radius: 1.5rem;}
+.search_login > a {padding: 0 0.7rem; font-size: 1.1rem;}
 /* mobile menu open */
-.m__trigger {display: block; visibility: visible;}
+#m__trigger {display: block; visibility: visible;}
+/* search box */
+/* modal */
+.search-container {
+    top: 0rem;
+    background-color: var(--color-light);
+  }
+  /* search bar */
+.search__box {
+    left: 0%;
+    top: 0rem;
+    width: 100%;
+    transform: inherit;
+    box-shadow: none;
+    border-radius: inherit;
+}
+.search__box > div:first-of-type > h2 {display: block; visibility: visible;}
+.search__box_close {display: block;}
+.search__box > form > fieldset {
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+.search_clear {
+    right: 6rem;  
+}
+.search_bar-ico {
+    right: 3rem;  
+}
+.search__log > ul > li > span {
+    padding: 0.7rem 0 0.7rem 2.8rem;
+    font-size: 1.4rem;
+}
+.search__term > h3 {
+    padding-top: 2rem;
+    font-size: 1.4rem;
+}
+.search__term_list > ul > li {
+    margin: 0 1.2rem 0.6rem 0;
+}
+.search__term_list > ul > li > a {
+    padding: 1rem 1.2rem;
+}
+.search__box_btn {display: none; visibility: hidden;}
+
+
 /* main */
 .air__information {padding: 1rem 0 2rem;}
 .air__information > div:first-of-type {margin-bottom: 1.6rem;}

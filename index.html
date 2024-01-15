@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- 404 오류예방 -->
-    <head profile="http://www.w3.org/2005/10/profile">
-
-      <link rel="icon" 
-            type="image/png" 
-            href="http://example.com/myicon.png" />
-      
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -305,24 +298,74 @@
             </ul>
           </div>
 
+          <!-- nav menu mobile -->
+          <div id="nav__menu-m">
+            <div class="menu-m_hd">
+              <span>
+                <a href="#none">
+                  <img src="./images/icon/drawer__home.svg" alt="#">
+                </a>
+              </span>
+
+              <span>
+                <button type="button">
+                  <img src="./images/icon/lang-dialog.svg" alt="#">
+                  <span>kr</span>
+                </button>
+                <button type="button">헤더</button>
+              </span>
+
+            </div>
+
+            <div class="menu-m-list">
+              <ul>
+                <li><button type="button">메뉴1</button></li>
+                <li><button type="button">메뉴2</button></li>
+                <li><button type="button">메뉴3</button></li>
+                <li><button type="button">메뉴4</button></li>
+              </ul>
+            </div>
+
+          </div>
+
           <!-- search Area -->
           <!-- icon -->
           <div class="nav__search">
-            <button type="button" class="search_btn">궁금한 것을 검색해 보세요</button>
-            <div>
+            <button type="button" class="search_btn">
+              <span>궁금한 것을 검색해 보세요</span>
+              <img src="./images/icon/nav_search.svg" alt="#" />
+            </button>
+
+            <div class="search_login">
               <a href="#none">로그인</a>
             </div>
+
+            <button type="button" id="m__trigger"></button>
           </div>
         </nav>
         <!-- search modal -->
         <div class="search-container" id="search">
           <div class="search__box">
+            <!--  -->
+            <div>
+              <h2>검색</h2>
+              <span class="search__box_close">
+                <button type="button"></button>
+              </span>
+            </div>
+
           <form action="#" name="search">
             <fieldset>
               <input type="search" required aria-label="Search" />
-              <span class="search_clear"></span>
+              <span class="search_clear">
+                <img src="./images/icon/clear-btn.svg" alt="#">
+              </span>
+              <span class="search_bar-ico">
+                <img src="./images/icon/nav_search.svg" alt="#">
+              </span>
             </fieldset>
           </form>
+
           <!-- search value log -->
           <div class="search__log">
             <ul class="search__log_list">
@@ -350,7 +393,7 @@
               </div>
 
               <div class="search__box_btn">
-              <button type="button">닫기</button>
+                <button type="button">닫기</button>
               </div>
             </div>
           </div>
