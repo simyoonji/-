@@ -154,8 +154,8 @@ if(localStorageKey !== null){
     parse.forEach(makeSearchLog);
 };
 
-// mobile menu open
 
+// mobile menu open
 const mobileMenuOpen = document.querySelector("#m__trigger");
 const mobileMenu = document.querySelector("#nav__menu-m");
 const mobileMenuClose = document.querySelector(".menu-m_hd > span:nth-of-type(2) > button:last-of-type");
@@ -175,4 +175,23 @@ $(window).resize(function(){
 
 });
 
+
 // mobile list tab
+const mListItem = document.querySelectorAll('.m-list-item');
+const mListCon = document.querySelectorAll('.m-list-contents');
+const ACTIVE = 'active'
+
+mListItem.forEach((el, index)=> {
+
+    el.addEventListener('click',function(){
+        mListCon.forEach((item)=>{
+            item.classList.remove(ACTIVE);
+        });
+        mListItem.forEach((item)=> {
+            item.classList.remove(ACTIVE);
+        });
+
+        mListItem[index].classList.add(ACTIVE);
+        mListCon[index].classList.add(ACTIVE);
+    });
+});
