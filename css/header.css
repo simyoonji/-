@@ -281,7 +281,7 @@
     opacity: 0;
     z-index: 996;
     overflow-y: auto;
-    background-color: var(--color-light);
+    background-color: #f6f8ff;
 }
 #nav__menu-m.on {
     display: block;
@@ -293,7 +293,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 2rem 0;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    background: var(--color-light);
 }
 .menu-m_hd > span {
     display:inline-block;
@@ -305,6 +307,7 @@
     line-height: 5rem;
     text-align: center;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 .menu-m_hd > span:nth-of-type(1) > img {
     line-height: 5rem;
@@ -347,6 +350,7 @@
     width: 100%;
     padding: 0 2rem;
     box-sizing: border-box;
+    background: var(--color-light);
 }
 #menu-m-list > ul {
     display: flex;
@@ -656,6 +660,9 @@
     border-radius: 2.6rem;
     border: 2.5px solid var(--color-blue);
     transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    -webkit-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
 }
 .search__box > form > fieldset > input:focus {
     outline: var(--color-transParent);
