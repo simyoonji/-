@@ -511,15 +511,15 @@
         margin-bottom: 1.6rem;
     }
     /* m-list-banner */
-    #m-list-banner {
+    .m-list-banner {
         display: block;
     }
-    #m-list-banner > li {
+    .m-list-banner > li {
         width: 100%;}
-    #m-list-banner > li:last-of-type {
+    .m-list-banner > li:last-of-type {
         margin: 1rem 0 0 0rem;
     }
-    #m-list-banner > li > a {
+    .m-list-banner > li > a {
         display: block;
     }
 } 

@@ -61,9 +61,10 @@ aside ul {
     display: flex;
     flex-direction: column-reverse;
 }
-.show {
+aside ul.show {
     display: none;
 }
+
 aside li {
     position: relative;
     overflow: hidden;
