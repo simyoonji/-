@@ -4,38 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO -->
     <title>korean air</title>
-    <meta name="author" content="Yoonji" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="#" />
-
+    <link rel="shortcut icon" href="favicon.png">
     <!-- CSS -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/mediaQuery_desktop.css" />
-    <link rel="stylesheet" href="./css/mediaQuery_tablet.css" />
-    <link rel="stylesheet" href="./css/mediaQuery_mobile.css" />
-
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- jquery -->
-    <script src="./lib/jquery-1.11.1.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/mediaQuery_desktop.css">
+    <link rel="stylesheet" href="./css/mediaQuery_tablet.css">
+    <link rel="stylesheet" href="./css/mediaQuery_mobile.css">
+    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/5a0d19e43a.js" crossorigin="anonymous"></script>
   </head>
+
   <body>
     <!--스킵내비게이션-->
     <div id="skip">
       <a href="#container" class="skip__Navigation">본문 바로가기</a>
     </div>
+
+    <!-- aside -->
+    <aside>
+      <button class="close-btn" type="button"></button>
+
+      <div>
+        <ul class="floating">
+          <!-- event -->
+          <li>
+            <a href="#none">
+              <img src="./images/icon/aside-img-2.avif" alt="">
+            </a>
+          </li>
+
+          <!-- chat -->
+          <li>
+             <a href="#none">
+              <img src="./images/icon/aside-img-1" alt="">
+             </a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="top-btn" href="#skip"></a>
+    </aside>
+
     <!-- container -->
     <div id="container">
+
       <!-- header Area -->
       <header id="header">
         <div class="lang">
@@ -598,7 +616,7 @@
               </span>
             </div>
 
-          <form action="#" name="search">
+          <form action="#" name="search" id="search__form">
             <fieldset>
               <input type="search" required aria-label="Search" />
               <span class="search_clear">
@@ -1287,7 +1305,9 @@
         </footer>
   </div>
 
-    <!-- Javascript -->
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./lib/jquery-1.11.1.min.js"></script>
     <script src="./src/header.js" defer></script>
     <script src="./src/swiper.js" defer></script>
     <script src="./src/main.js" defer></script>

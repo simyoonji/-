@@ -1,3 +1,105 @@
+html {
+    scroll-behavior: smooth;
+}
+aside {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    right: 3rem;
+    bottom: 1rem;
+    z-index: 990;
+}
+aside > button, aside li, .top-btn {
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-top: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+aside > button {
+    position: relative;
+}
+aside .close-btn {
+    background-color: #7f7f7f;
+}
+aside .close-btn::before, aside .close-btn::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.4rem;
+    height: 0.2rem;
+    margin-left: -1.2rem;
+    border-radius: 0.1rem;
+    background-color: #fff;
+}
+aside .close-btn::before {
+    transform: rotate(-135deg);
+}
+aside .close-btn::after {
+    transform: rotate(-45deg);
+}
+aside .top-btn {
+    position: relative;
+    background-color: #fff;
+    border: solid 1px #d9dbe1;
+}
+aside .top-btn::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-50%, -50%);
+    background: url(../images/icon/top-btn.svg)center center no-repeat;
+    background-size: cover;
+}
+aside ul {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.show {
+    display: none;
+}
+aside li {
+    position: relative;
+    overflow: hidden;
+}
+aside li a {
+    display: block;
+    cursor: pointer;
+}
+aside li:nth-of-type(1) {
+    background-color: #0064DE;
+}
+aside li:nth-of-type(2) {
+    background-color: #10a1c0;
+}
+aside li a img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 6.5rem;
+}
+aside li:nth-of-type(2) a::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 1rem;
+    background: url(../images/icon/aside-img-3.svg)center center no-repeat;
+    background-size: cover;
+    z-index: 991;
+}
+
+
 /* container area */
 #container {
     width:100%;

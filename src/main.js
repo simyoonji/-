@@ -1,3 +1,20 @@
+const CloseBtn = document.querySelector('.close-btn');
+const TopBtn = document.querySelector('.top-btn');
+const floatingBtn = document.querySelector('.floating');
+
+CloseBtn.addEventListener('click', () => {
+    floatingBtn.classList.toggle('show');
+});
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        TopBtn.style.display = 'block';
+    } else {
+        TopBtn.style.display = 'none';
+    }
+});
+
+
 $(function(){
     // affiliate list show/hide
     const $accListTitle = $('.acc__list-pc > a');

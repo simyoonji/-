@@ -22,11 +22,11 @@ $(function(){
     let $ctRight = $('.contact__rt');
 
     $(function(){
-    $($ctList).eq(0).on("click",function(){
-        $(this).toggleClass(CHANGE);
-        $($ctListHide).stop().toggleClass(ON);
-        $($ctRight).stop().toggleClass(ON);
-    });
+        $($ctList).eq(0).on("click",function(){
+            $(this).toggleClass(CHANGE);
+            $($ctListHide).stop().toggleClass(ON);
+            $($ctRight).stop().toggleClass(ON);
+        });
     });
 }); //FN
 
