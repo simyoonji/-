@@ -16,7 +16,6 @@ window.addEventListener('scroll', () => {
 
 
 $(function(){
-    // affiliate list show/hide
     const $accListTitle = $('.acc__list-pc > a');
     const $accListSub = $('.acc__list_sub-pc');
     const $affMain = $('.aff__main');
